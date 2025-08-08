@@ -1,0 +1,456 @@
+/* 
+===============================================
+ GLOBAL RESET & BASE SETTINGS
+===============================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Corrected from border: border-box */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+===============================================
+ NAVBAR STYLING
+===============================================
+*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    padding: 0 10px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 113px;
+}
+
+.logo { /* Universal logo class */
+    background-image: url('img/amazon_logo.png');
+    height: 50px;
+    width: 100%;
+    background-size: cover;
+}
+
+.nav-logo:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 
+===============================================
+ DELIVERY LOCATION
+===============================================
+*/
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+.add-first {
+    color: #cccccc;
+    font-size: 0.9rem;
+    padding-left: 15px;
+}
+
+.add-second {
+    font-size: 1rem;
+    padding-left: 3px;
+}
+
+.nav-address:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 
+===============================================
+ SEARCH BAR
+===============================================
+*/
+.nav-search {
+    display: flex;
+    background-color: pink;
+    height: 40px;
+    width: 620px;
+    border-radius: 4px;
+    max-width: 100%; /* Responsive */
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: 50px;
+    border: none;
+    text-align: center;
+}
+
+.nav-search:hover {
+    border: 2px solid orange;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    padding-left: 5px;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgb(255, 187, 0);
+    color: #0f1111;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+}
+
+/* 
+===============================================
+ ACCOUNT & ORDERS
+===============================================
+*/
+.nav-first {
+    font-size: 0.75rem;
+}
+
+.nav-second {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.nav-signin:hover,
+.nav-return:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 
+===============================================
+ CART
+===============================================
+*/
+.nav-cart i {
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 
+===============================================
+ PANEL MENU
+===============================================
+*/
+.panel {
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+.panel-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 70%;
+    font-size: 0.9rem;
+}
+
+.panel-options p {
+    cursor: pointer;
+}
+
+.panel-options p:hover {
+    text-decoration: underline;
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* 
+===============================================
+ HERO SECTION
+===============================================
+*/
+.hero-section {
+    background-image: url(img/hero_image.jpg);
+    height: 400px;
+    width: 100%;
+
+    margin: 2px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+}
+
+
+.hero-message a {
+    color: #007185;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* 
+===============================================
+ SHOP SECTION
+===============================================
+*/
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #d4dbd9;
+    padding: 15px;
+}
+
+.box {
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+    min-width: 250px; /* Responsive */
+}
+
+.box-image {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.box-content h2 {
+    margin-bottom: 6px;
+}
+
+.box-content p {
+    color: #007185;
+    cursor: pointer;
+}
+
+.box-content p:hover {
+    text-decoration: underline;
+}
+
+/* 
+===============================================
+ SIGN-IN BOX
+===============================================
+*/
+.sign-in {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign-in p {
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.sign-in button {
+    margin-top: 3px;
+    height: 28px;
+    width: 220px;
+    font-weight: 700;
+    background-color: rgb(252, 180, 46);
+    border-radius: 5px;
+    margin-bottom: 3px;
+    border: none;
+}
+
+.sign-in button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.sign-in a {
+    color: #007185;
+    cursor: pointer;
+}
+
+.sign-in a:hover {
+    text-decoration: underline;
+}
+
+/* 
+===============================================
+ FOOTER
+===============================================
+*/
+footer {
+    margin-top: 15px;
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.foot-panel2 {
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Responsive */
+    padding: 20px 10px;
+}
+
+ul p {
+    font-weight: 700;
+}
+
+ul a {
+    display: block;
+    font-size: 0.87rem;
+    margin-top: 10px;
+    color: #dddddd;
+    text-decoration: none;
+}
+
+ul a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel3 {
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.1px solid rgba(165, 162, 162, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Responsive */
+    padding: 15px;
+}
+
+.details {
+    margin-left: 20px;
+}
+
+.details button {
+    height: 35px;
+    width: 130px;
+    background-color: #222f3d;
+    color: rgba(241, 232, 232, 0.6);
+    border: 1px solid rgba(241, 232, 232, 0.2);
+}
+
+.details button:hover {
+    background-color: white;
+    color: #222f3d;
+    cursor: pointer;
+}
+
+/* 
+===============================================
+ FOOTER BOTTOM TEXT
+===============================================
+*/
+.foot-panel4 {
+    border-top: 0.1px solid rgba(165, 162, 162, 0.3);
+    background-color: #222f3d;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.pages {
+    font-size: 1rem;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* 
+===============================================
+ RESPONSIVE DESIGN
+===============================================
+*/
+@media (max-width: 1024px) {
+    .nav-search {
+        width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .nav-search {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .shop-section {
+        justify-content: center;
+    }
+
+    .box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 90%;
+    }
+
+    .panel-options {
+        font-size: 0.8rem;
+        justify-content: center;
+    }
+
+    .hero-section {
+        height: 200px;
+    }
+}
