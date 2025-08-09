@@ -1,110 +1,103 @@
-/* 
-===============================================
- GLOBAL RESET & BASE SETTINGS
-===============================================
-*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Corrected from border: border-box */
-    font-family: Arial, Helvetica, sans-serif;
+
+
+/* Global/reset */
+*{
+    margin:0px;                 /* Remove default margins */
+    padding:0px;                /* Remove default padding */
+    font-family: Arial, Helvetica, sans-serif; /* Base font stack */
+    border:border-box;          /* Likely intended box-sizing; consider using box-sizing: border-box */
 }
 
-/* 
-===============================================
- NAVBAR STYLING
-===============================================
-*/
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 60px;
-    background-color: #0f1111;
+/* Top navigation bar */
+.navbar{
+    display: flex;              /* Horizontal layout */
+    align-items: center;        /* Vertically center items */
+    justify-content: space-around; /* Even spacing */
+    height:60px;
+    background-color: #0f1111;  /* Dark Amazon-like header */
     color: white;
-    padding: 0 10px;
 }
 
-.nav-logo {
+/* Brand logo container */
+.nav-logo{
     height: 50px;
     width: 113px;
 }
 
-.logo { /* Universal logo class */
-    background-image: url('img/amazon_logo.png');
+/* Logo image (background) */
+.logo{
+    background-image: url('amazon_logo.png');
     height: 50px;
     width: 100%;
-    background-size: cover;
+    background-size: cover;     /* Cover container area */
 }
 
-.nav-logo:hover {
-    border: 2px solid white;
+/* Add a white border on hover for logo */
+.nav-logo:hover{
+    border:2px solid white;
     border-radius: 4px;
-    cursor: pointer;
 }
 
-/* 
-===============================================
- DELIVERY LOCATION
-===============================================
-*/
-.add-icon {
+/* Address box (box2) */
+/* Align pin icon and text horizontally */
+.add-icon{
     display: flex;
     align-items: center;
 }
 
-.add-first {
-    color: #cccccc;
+/* "Deliver to" text */
+.add-first{
+    color:#cccccc;
     font-size: 0.9rem;
     padding-left: 15px;
 }
 
-.add-second {
+/* Location text */
+.add-second{
     font-size: 1rem;
     padding-left: 3px;
 }
 
-.nav-address:hover {
-    border: 2px solid white;
+/* Hover outline for address area */
+.nav-address:hover{
+    border:2px solid white;
     border-radius: 4px;
     cursor: pointer;
 }
 
-/* 
-===============================================
- SEARCH BAR
-===============================================
-*/
-.nav-search {
-    display: flex;
-    background-color: pink;
+/* Search area (box3) */
+.nav-search{
+    display: flex;              /* Select, input, and icon in a row */
+    background-color: pink;     /* Temporary debug color */
     height: 40px;
-    width: 620px;
+    width: 620px;               /* Fixed width search bar */
     border-radius: 4px;
-    max-width: 100%; /* Responsive */
 }
 
-.search-select {
+/* Category dropdown */
+.search-select{
     background-color: #f3f3f3;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    width: 50px;
+    width:50px;
     border: none;
     text-align: center;
 }
 
-.nav-search:hover {
+/* Emphasize search on hover */
+.nav-search:hover{
     border: 2px solid orange;
 }
 
-.search-input {
+/* Text input grows to fill remaining space */
+.search-input{
     width: 100%;
     font-size: 1rem;
     border: none;
-    padding-left: 5px;
 }
 
-.search-icon {
+/* Search icon button at the right */
+.search-icon{
     width: 45px;
     display: flex;
     justify-content: center;
@@ -114,213 +107,211 @@
     color: #0f1111;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    cursor: pointer;
 }
 
-/* 
-===============================================
- ACCOUNT & ORDERS
-===============================================
-*/
-.nav-first {
+/* Account/sign-in (box4) */
+/* Small top line text */
+.nav-first{
     font-size: 0.75rem;
 }
 
-.nav-second {
+/* Bold second line text */
+.nav-second{
     font-size: 0.8rem;
     font-weight: 700;
 }
 
-.nav-signin:hover,
-.nav-return:hover {
-    border: 2px solid white;
+/* Hover outline for sign-in and returns */
+.nav-signin:hover,.nav-return:hover{
+    border:2px solid white;
     border-radius: 4px;
     cursor: pointer;
 }
 
-/* 
-===============================================
- CART
-===============================================
-*/
+/* Cart (box5) */
+/* Make cart icon larger */
 .nav-cart i {
     font-size: 30px;
 }
 
-.nav-cart {
+/* Cart text style */
+.nav-cart{
     font-size: 0.85rem;
     font-weight: 700;
 }
 
-.nav-cart:hover {
-    border: 2px solid white;
+/* Hover outline for cart */
+.nav-cart:hover{
+    border:2px solid white;
     border-radius: 4px;
     cursor: pointer;
 }
 
-/* 
-===============================================
- PANEL MENU
-===============================================
-*/
-.panel {
-    height: 40px;
-    background-color: #222f3d;
+/* Secondary nav panel below header */
+.panel{
+    height:40px;
+    background-color: #222f3d;  /* Dark blue-gray */
     display: flex;
     color: white;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap; /* For responsiveness */
 }
 
-.panel-options {
+/* Container for panel links */
+.panel-options{
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     width: 70%;
     font-size: 0.9rem;
 }
 
-.panel-options p {
-    cursor: pointer;
+/* Individual option spacing and cursor */
+.panel-options p{
+    margin-left:15px;
+    cursor: context-menu;       /* Non-clickable cursor (consider pointer if links) */
 }
 
-.panel-options p:hover {
+/* Visual cue on hover for options */
+.panel-options p:hover{
     text-decoration: underline;
 }
 
-.panel-deals {
+/* Deals text emphasized on right */
+.panel-deals{
     font-size: 0.9rem;
     font-weight: 700;
 }
 
-/* 
-===============================================
- HERO SECTION
-===============================================
-*/
-.hero-section {
-    background-image: url(img/hero_image.jpg);
-    height: 400px;
-    width: 100%;
-
-    margin: 2px;
+/* Hero section (large banner) */
+.hero-section{
+    background-image: url(hero_image.jpg);
+    height:350px;
     background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    color: white;
+    align-items: flex-end;       /* Position message at bottom */
 }
 
+/* White message bar over hero */
+.hero-message{
+    height: 40px;
+    width: 90%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    position: relative;
+    bottom:35px;                 /* Lift above bottom edge */
+}
 
-.hero-message a {
-    color: #007185;
+/* Links inside hero message */
+.hero-message a{
+    color:#007185;
     cursor: pointer;
     text-decoration: underline;
 }
 
-/* 
-===============================================
- SHOP SECTION
-===============================================
-*/
-.shop-section {
+/* Shop/product grid section */
+.shop-section{
+    height:980px;                /* Fixed height (may cause overflow) */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #d4dbd9;
-    padding: 15px;
 }
 
-.box {
-    height: 400px;
+/* Individual product/category box */
+.box{
+    height:400px;
     width: 23%;
+    /* border: 2px solid black; */ /* Debug border */
     background-color: white;
-    padding: 20px 0px 15px;
+    padding:20px 0px 15px;
     margin-top: 15px;
-    min-width: 250px; /* Responsive */
 }
 
-.box-image {
-    margin-top: 1rem;
+/* Image area inside box */
+.box-image{
+    margin-top:1rem;
     margin-bottom: 1rem;
-    height: 300px;
+    height:300px;
     background-size: cover;
-    background-position: center;
 }
 
-.box-content {
+/* Text content paddings inside box */
+.box-content{
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-.box-content h2 {
+/* Space under box title */
+.box-content h2{
     margin-bottom: 6px;
 }
 
-.box-content p {
+/* Link style under box */
+.box-content p{
     color: #007185;
-    cursor: pointer;
+    cursor: context-menu;        /* Not clickable; change to pointer if link */
 }
 
-.box-content p:hover {
+/* Underline on hover */
+.box-content p:hover{
     text-decoration: underline;
 }
 
-/* 
-===============================================
- SIGN-IN BOX
-===============================================
-*/
-.sign-in {
-    height: 150px;
+/* Sign-in prompt section */
+.sign-in{
+    height:150px;
+    /* background-color: pink; */ /* Debug color */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.sign-in p {
+/* Sign-in helper text */
+.sign-in p{
     font-size: 0.78rem;
     font-weight: 600;
 }
 
-.sign-in button {
+/* Primary button styles */
+button{
     margin-top: 3px;
-    height: 28px;
+    height:28px;
     width: 220px;
     font-weight: 700;
     background-color: rgb(252, 180, 46);
     border-radius: 5px;
     margin-bottom: 3px;
-    border: none;
 }
 
-.sign-in button:hover {
+/* Button hover color */
+button:hover{
     background-color: orange;
     cursor: pointer;
 }
 
-.sign-in a {
+/* Sign-in links */
+.sign-in a{
     color: #007185;
-    cursor: pointer;
+    cursor: context-menu;        /* Consider pointer if clickable */
 }
 
-.sign-in a:hover {
+/* Underline on hover for sign-in link */
+.sign-in a:hover{
     text-decoration: underline;
 }
 
-/* 
-===============================================
- FOOTER
-===============================================
-*/
-footer {
+/* Footer wrapper */
+footer{
     margin-top: 15px;
 }
 
-.foot-panel1 {
+/* Back-to-top panel */
+.foot-panel1{
     background-color: #37475a;
     color: white;
     height: 50px;
@@ -328,129 +319,261 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 0.9rem;
-    cursor: pointer;
 }
 
-.foot-panel2 {
+/* Footer link columns area */
+.foot-panel2{
     background-color: #222f3d;
     color: white;
+    height:300px;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap; /* Responsive */
-    padding: 20px 10px;
+    align-items: center;
 }
 
-ul p {
+/* Column headings bold */
+ul p{
     font-weight: 700;
 }
 
-ul a {
+/* Footer links */
+ul a{
     display: block;
     font-size: 0.87rem;
     margin-top: 10px;
-    color: #dddddd;
-    text-decoration: none;
+    color:#dddddd;
 }
 
-ul a:hover {
-    text-decoration: underline;
-}
-
-.foot-panel3 {
+/* Footer logo strip */
+.foot-panel3{
+    height: 70px;
     background-color: #222f3d;
     color: white;
-    border-top: 0.1px solid rgba(165, 162, 162, 0.3);
+    border-top: 0.1px solid rgb(165, 162, 162,0.3);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Responsive */
-    padding: 15px;
 }
 
-.details {
-    margin-left: 20px;
+/* Logo in footer (note: .logo also defined above) */
+.logo{
+    background-image: url("amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
 }
 
-.details button {
-    height: 35px;
-    width: 130px;
+/* Footer language/region buttons container */
+.details{
+    margin-left: 60px;
+}
+
+/* Footer small buttons */
+.details button{
+    height:35px;
+    width:130px;
     background-color: #222f3d;
-    color: rgba(241, 232, 232, 0.6);
-    border: 1px solid rgba(241, 232, 232, 0.2);
+    color: rgb(241,232,232,0.6);
+    border: 1px solid rgb(241, 232, 232,0.2);
 }
 
-.details button:hover {
+/* Invert on hover */
+.details button:hover{
     background-color: white;
-    color: #222f3d;
+    color:#222f3d;
     cursor: pointer;
 }
 
-/* 
-===============================================
- FOOTER BOTTOM TEXT
-===============================================
-*/
-.foot-panel4 {
-    border-top: 0.1px solid rgba(165, 162, 162, 0.3);
+/* Footer legal strip (panel4) */
+.foot-panel4{
+    border-top: 0.1px solid rgb(165, 162, 162,0.3);
     background-color: #222f3d;
     color: white;
-    padding: 15px 0;
-    text-align: center;
+    height: 76px;
 }
 
-.pages {
+/* Footer small page links */
+.pages{
     font-size: 1rem;
+    text-align: center;
+    padding-top: 16px;
 }
 
-.copyright {
+/* Copyright line */
+.copyright{
     font-size: 0.9rem;
+    text-align: center;
     margin-top: 5px;
 }
 
-/* 
-===============================================
- RESPONSIVE DESIGN
-===============================================
-*/
+/* Tablet: up to 1024px */
 @media (max-width: 1024px) {
-    .nav-search {
-        width: 500px;
-    }
+  /* Navbar */
+  .navbar {
+    padding: 8px 12px;
+    gap: 12px;
+    height: auto;            /* allow wrapping */
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .nav-logo { width: 100px; height: 46px; }
+
+  /* Search bar grows/shrinks and can wrap to next line */
+  .nav-search {
+    order: 3;                /* push below other items if needed */
+    width: 100%;
+    max-width: none;
+    margin-top: 8px;
+  }
+
+  /* Panel */
+  .panel {
+    padding: 0 12px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .panel-options {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+  .panel-options p { margin-left: 0; }
+
+  /* Hero */
+  .hero-section {
+    height: 300px;
+    background-position: center;
+  }
+  .hero-message {
+    width: 95%;
+    bottom: 24px;
+    font-size: 0.85rem;
+  }
+
+  /* Shop grid switches to 3 columns */
+  .shop-section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    height: auto;            /* let content define height */
+  }
+  .box {
+    width: auto;             /* grid controls width */
+    height: auto;
+  }
+  .box-image { height: 240px; }
+
+  /* Footer */
+  .foot-panel2 {
+    height: auto;            /* allow wrapping */
+    padding: 20px 16px;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .details {
+    margin-left: 0;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px;
-        justify-content: center;
-    }
+/* Mobile: up to 600px */
+@media (max-width: 600px) {
+  /* Navbar simplifies */
+  .navbar {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  /* Hide less critical items to save space; keep logo, search, cart */
+  .nav-address,
+  .nav-return { display: none; }
 
-    .nav-search {
-        width: 100%;
-        margin-top: 10px;
-    }
+  .nav-logo { width: 90px; height: 44px; }
 
-    .shop-section {
-        justify-content: center;
-    }
+  .nav-search {
+    height: 38px;
+    margin-top: 6px;
+  }
+  .search-select { width: 46px; font-size: 0.9rem; }
+  .search-input { font-size: 0.95rem; }
+  .search-icon { width: 42px; font-size: 1.1rem; }
 
-    .box {
-        width: 45%;
-    }
+  /* Panel can scroll horizontally if many items */
+  .panel {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  .panel-options {
+    width: max-content;
+    white-space: nowrap;
+    gap: 12px;
+  }
+
+  /* Hero smaller */
+  .hero-section { height: 220px; }
+  .hero-message {
+    width: calc(100% - 20px);
+    bottom: 16px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  /* Shop grid to 1 column */
+  .shop-section {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 12px;
+  }
+  .box-image { height: 200px; }
+  .box-content { margin: 0 12px; }
+  .box-content h2 { font-size: 1rem; }
+
+  /* Sign-in block spacing */
+  .sign-in {
+    height: auto;
+    padding: 12px 0;
+  }
+  button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Footer stacks nicely */
+  .foot-panel1 { height: 44px; font-size: 0.85rem; }
+  .foot-panel2 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  ul a { font-size: 0.9rem; }
+  .foot-panel3 {
+    height: auto;
+    padding: 12px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .foot-panel4 {
+    height: auto;
+    padding: 10px 0 14px;
+  }
+  .pages, .copyright {
+    font-size: 0.85rem;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
 }
 
-@media (max-width: 480px) {
-    .box {
-        width: 90%;
-    }
-
-    .panel-options {
-        font-size: 0.8rem;
-        justify-content: center;
-    }
-
-    .hero-section {
-        height: 200px;
-    }
+/* Small phones: up to 380px (optional fine-tuning) */
+@media (max-width: 380px) {
+  .search-select { display: none; }   /* reclaim space */
+  .nav-search { border-radius: 4px; }
+  .search-input { padding-left: 8px; }
+  .hero-section { height: 200px; }
+  .box-image { height: 180px; }
 }
+
+
