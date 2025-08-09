@@ -183,6 +183,7 @@ header .logo {
 /* ---------------- Hero section ---------------- */
 .hero-section {
   background-image: url('img/hero_image.jpg');
+  padding:5px;
   height: 350px;
   background-size: cover;
   background-position: center;
